@@ -30,10 +30,36 @@
                   <d:ctr name="PORTC" type="IDENTIFIABLE">
                     <d:var name="DioPortId" type="INTEGER" value="2"/>
                     <d:lst name="DioChannel" type="MAP">
-                      <d:ctr name="DioChannel_0" type="IDENTIFIABLE">
-                        <d:var name="DioChannelId" type="INTEGER" value="0">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                      <d:ctr name="C8_BIT0" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="8"/>
+                        <d:lst name="DioChannelEcucPartitionRef"/>
+                      </d:ctr>
+                      <d:ctr name="C9_BIT1" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="9"/>
+                        <d:lst name="DioChannelEcucPartitionRef"/>
+                      </d:ctr>
+                      <d:ctr name="C10_BIT2" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="10"/>
+                        <d:lst name="DioChannelEcucPartitionRef"/>
+                      </d:ctr>
+                      <d:ctr name="C11_BIT3" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="11"/>
+                        <d:lst name="DioChannelEcucPartitionRef"/>
+                      </d:ctr>
+                      <d:ctr name="C12_BIT4" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="12"/>
+                        <d:lst name="DioChannelEcucPartitionRef"/>
+                      </d:ctr>
+                      <d:ctr name="C13_BIT5" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="13"/>
+                        <d:lst name="DioChannelEcucPartitionRef"/>
+                      </d:ctr>
+                      <d:ctr name="C14_BIT6" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="14"/>
+                        <d:lst name="DioChannelEcucPartitionRef"/>
+                      </d:ctr>
+                      <d:ctr name="C15_BIT7" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="15"/>
                         <d:lst name="DioChannelEcucPartitionRef"/>
                       </d:ctr>
                     </d:lst>
