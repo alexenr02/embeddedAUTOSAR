@@ -25,10 +25,14 @@ int main( void )
 
     while( 1u )
     {
-        for( uint8_t i = 0; i <8; i++ ) {
-            Dio_FlipChannel( DioConf_DioChannel_C8_BIT0 + i);
-        }    
-        for( uint32 i = 0u ; i < 500000u ; i++ );
+        for( uint8 i = 0u ; i < 8u ; i++ )
+        {
+            Dio_WriteChannelGroup(DioConf_DioChannelGroup_PORTC_LEDS, 0x00u);
+            Dio_WriteChannelGroup(DioConf_DioChannelGroup_PORTC_LEDS, ( 1u << i )  );
+            for( uint32 i = 0u ; i < 500000u ; i++ );
+        }
+           
+        
     }
 
     return 0u;

@@ -64,7 +64,7 @@
                       </d:ctr>
                     </d:lst>
                     <d:lst name="DioChannelGroup" type="MAP">
-                      <d:ctr name="PORTD_LEDS" type="IDENTIFIABLE">
+                      <d:ctr name="PORTC_LEDS" type="IDENTIFIABLE">
                         <d:var name="DioChannelGroupIdentification" 
                                type="STRING" value="LedsGroup"/>
                         <d:var name="DioPortBitNumber" type="INTEGER" value="8"/>

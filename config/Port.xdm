@@ -104,7 +104,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_HIGH"/>
+                               value="PORT_PIN_LEVEL_LOW"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
                       <d:ctr name="C9_BIT1" type="IDENTIFIABLE">
@@ -159,9 +159,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_LOW">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_LEVEL_HIGH"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
                       <d:ctr name="C10_BIT2" type="IDENTIFIABLE">
@@ -271,9 +269,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_LOW">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_LEVEL_HIGH"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
                       <d:ctr name="C12_BIT4" type="IDENTIFIABLE">
@@ -383,9 +379,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_LOW">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_LEVEL_HIGH"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
                       <d:ctr name="C14_BIT6" type="IDENTIFIABLE">
@@ -495,9 +489,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_LOW">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_LEVEL_HIGH"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
                     </d:lst>
