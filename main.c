@@ -32,6 +32,20 @@ int main( void )
         } else {
             Dio_WriteChannel( DioConf_DioChannel_D15_RED_LED, STD_OFF );
         }
+        /*Inquire the pin state where the button is connected*/
+        if( Dio_ReadChannel( DioConf_DioChannel_D17_SW2_BTN ) == STD_ON )
+        {
+            Dio_WriteChannel( DioConf_DioChannel_D16_GREEN_LED, STD_ON );
+        } else {
+            Dio_WriteChannel( DioConf_DioChannel_D16_GREEN_LED, STD_OFF );
+        }
+        /*Inquire the pin state where the button is connected*/
+        if( Dio_ReadChannel( DioConf_DioChannel_E12_SW1_BTN ) == STD_ON )
+        {
+            Dio_WriteChannel( DioConf_DioChannel_D0_BLUE_LED, STD_ON );
+        } else {
+            Dio_WriteChannel( DioConf_DioChannel_D0_BLUE_LED, STD_OFF );
+        }
         /*dummy delay to avoid polling the btn to often*/
         for( uint32 i = 0u ; i < 1000000u ; i++ );
     }
