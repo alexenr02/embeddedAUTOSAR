@@ -76,6 +76,26 @@
                     <d:lst name="DioChannelGroup" type="MAP"/>
                     <d:lst name="DioPortEcucPartitionRef"/>
                   </d:ctr>
+                  <d:ctr name="PORTC" type="IDENTIFIABLE">
+                    <d:var name="DioPortId" type="INTEGER" value="2"/>
+                    <d:lst name="DioChannel" type="MAP"/>
+                    <d:lst name="DioChannelGroup" type="MAP">
+                      <d:ctr name="PORTC_LEDS" type="IDENTIFIABLE">
+                        <d:var name="DioChannelGroupIdentification" 
+                               type="STRING" value="LedsGroup"/>
+                        <d:var name="DioPortBitNumber" type="INTEGER" value="8"/>
+                        <d:var name="DioPortOffset" type="INTEGER" value="8"/>
+                        <d:var name="DioPortMask" type="INTEGER" value="65280">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@CALC</a:v>
+                            <a:v>@DEF</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:lst name="DioChannelGroupEcucPartitionRef"/>
+                      </d:ctr>
+                    </d:lst>
+                    <d:lst name="DioPortEcucPartitionRef"/>
+                  </d:ctr>
                 </d:lst>
               </d:ctr>
               <d:ctr name="DioGeneral" type="IDENTIFIABLE">

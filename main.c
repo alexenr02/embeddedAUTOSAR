@@ -21,33 +21,37 @@ void EcuM_Init( void );
 */
 int main( void )
 {
+    volatile uint32_t period = 3u;
     EcuM_Init();
 
     while(1)
     {
-        /*Inquire the pin state where the button is connected*/
-        if( Dio_ReadChannel( DioConf_DioChannel_A12_SW3_BTN ) == STD_ON )
+        for( uint8 i = 0u ; i < 8u ; i++ )
         {
-            Dio_WriteChannel( DioConf_DioChannel_D15_RED_LED, STD_ON );
-        } else {
-            Dio_WriteChannel( DioConf_DioChannel_D15_RED_LED, STD_OFF );
+            Dio_WriteChannelGroup(DioConf_DioChannelGroup_PORTC_LEDS, 0x00u);
+            Dio_WriteChannelGroup(DioConf_DioChannelGroup_PORTC_LEDS, ( 1u << i )  );
+            for( uint32 j = 0u ; j < period ; j++ );
         }
         /*Inquire the pin state where the button is connected*/
-        if( Dio_ReadChannel( DioConf_DioChannel_D17_SW2_BTN ) == STD_ON )
+        if( Dio_ReadChannel( DioConf_DioChannel_E12_SW1_BTN ) == STD_OFF )
         {
-            Dio_WriteChannel( DioConf_DioChannel_D16_GREEN_LED, STD_ON );
-        } else {
-            Dio_WriteChannel( DioConf_DioChannel_D16_GREEN_LED, STD_OFF );
+            period = 50000u;
         }
+        
         /*Inquire the pin state where the button is connected*/
-        if( Dio_ReadChannel( DioConf_DioChannel_E12_SW1_BTN ) == STD_ON )
+        if( Dio_ReadChannel( DioConf_DioChannel_D17_SW2_BTN ) == STD_OFF )
         {
-            Dio_WriteChannel( DioConf_DioChannel_D0_BLUE_LED, STD_ON );
-        } else {
-            Dio_WriteChannel( DioConf_DioChannel_D0_BLUE_LED, STD_OFF );
+            period = 100000u;
         }
-        /*dummy delay to avoid polling the btn to often*/
-        for( uint32 i = 0u ; i < 1000000u ; i++ );
+
+        /*Inquire the pin state where the button is connected*/
+        if( Dio_ReadChannel( DioConf_DioChannel_A12_SW3_BTN ) == STD_OFF )
+        {
+            period = 300000u;
+        }
+
+        
+
     }
 
     return 0u;
