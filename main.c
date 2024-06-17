@@ -23,16 +23,17 @@ int main( void )
 {
     EcuM_Init();
 
-    while( 1u )
+    while(1)
     {
-        for( uint8 i = 0u ; i < 8u ; i++ )
+        /*Inquire the pin state where the button is connected*/
+        if( Dio_ReadChannel( DioConf_DioChannel_A12_SW3_BTN ) == STD_ON )
         {
-            Dio_WriteChannelGroup(DioConf_DioChannelGroup_PORTC_LEDS, 0x00u);
-            Dio_WriteChannelGroup(DioConf_DioChannelGroup_PORTC_LEDS, ( 1u << i )  );
-            for( uint32 i = 0u ; i < 500000u ; i++ );
+            Dio_WriteChannel( DioConf_DioChannel_D15_RED_LED, STD_ON );
+        } else {
+            Dio_WriteChannel( DioConf_DioChannel_D15_RED_LED, STD_OFF );
         }
-           
-        
+        /*dummy delay to avoid polling the btn to often*/
+        for( uint32 i = 0u ; i < 1000000u ; i++ );
     }
 
     return 0u;

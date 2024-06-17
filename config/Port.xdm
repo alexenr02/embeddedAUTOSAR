@@ -52,18 +52,21 @@
                 </d:ctr>
                 <d:lst name="PortContainer" type="MAP">
                   <d:ctr name="PortContainer_0" type="IDENTIFIABLE">
-                    <d:var name="PortNumberOfPortPins" type="INTEGER" value="8"/>
+                    <d:var name="PortNumberOfPortPins" type="INTEGER" value="2">
+                      <a:a name="IMPORTER_INFO">
+                        <a:v>@CALC</a:v>
+                        <a:v>@DEF</a:v>
+                      </a:a>
+                    </d:var>
                     <d:lst name="PortPin" type="MAP">
-                      <d:ctr name="C8_BIT0" type="IDENTIFIABLE">
+                      <d:ctr name="D15_RED_LED" type="IDENTIFIABLE">
                         <d:var name="PortPinPFE" type="BOOLEAN" value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinODE" type="BOOLEAN" value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
-                        <d:var name="PortPinLK" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                        <d:var name="PortPinLK" type="BOOLEAN" value="false"/>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
                                value="false"/>
                         <d:var name="PortPinModeChangeable" type="BOOLEAN" 
@@ -76,7 +79,7 @@
                             <a:v>@CALC</a:v>
                           </a:a>
                         </d:var>
-                        <d:var name="PortPinPcr" type="INTEGER" value="72"/>
+                        <d:var name="PortPinPcr" type="INTEGER" value="111"/>
                         <d:var name="PortPinMode" type="ENUMERATION" 
                                value="GPIO">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -107,7 +110,7 @@
                                value="PORT_PIN_LEVEL_LOW"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
-                      <d:ctr name="C9_BIT1" type="IDENTIFIABLE">
+                      <d:ctr name="A12_SW3_BTN" type="IDENTIFIABLE">
                         <d:var name="PortPinPFE" type="BOOLEAN" value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
@@ -118,20 +121,16 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="false"/>
                         <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="false"/>
                         <d:var name="PortPinId" type="INTEGER" value="2">
                           <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
                             <a:v>@CALC</a:v>
+                            <a:v>@DEF</a:v>
                           </a:a>
                         </d:var>
-                        <d:var name="PortPinPcr" type="INTEGER" value="73"/>
+                        <d:var name="PortPinPcr" type="INTEGER" value="12"/>
                         <d:var name="PortPinMode" type="ENUMERATION" 
                                value="GPIO">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -141,355 +140,21 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinPE" type="ENUMERATION" 
-                               value="PullDisabled">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PullDisabled"/>
                         <d:var name="PortPinPS" type="ENUMERATION" 
-                               value="PullDown">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PullDown"/>
                         <d:var name="PortPinSlewRate" type="ENUMERATION" 
                                value="FAST_SLEW_RATE">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_OUT"/>
+                               value="PORT_PIN_IN"/>
                         <d:var name="PortPinInitialMode" type="ENUMERATION" 
                                value="PORT_GPIO_MODE">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_HIGH"/>
-                        <d:lst name="PortPinEcucPartitionRef"/>
-                      </d:ctr>
-                      <d:ctr name="C10_BIT2" type="IDENTIFIABLE">
-                        <d:var name="PortPinPFE" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinODE" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLK" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinId" type="INTEGER" value="3">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinPcr" type="INTEGER" value="74"/>
-                        <d:var name="PortPinMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDSE" type="ENUMERATION" 
-                               value="Low_Drive_Strength">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinPE" type="ENUMERATION" 
-                               value="PullDisabled">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinPS" type="ENUMERATION" 
-                               value="PullDown">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinSlewRate" type="ENUMERATION" 
-                               value="FAST_SLEW_RATE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_OUT"/>
-                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="PORT_GPIO_MODE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_HIGH"/>
-                        <d:lst name="PortPinEcucPartitionRef"/>
-                      </d:ctr>
-                      <d:ctr name="C11_BIT3" type="IDENTIFIABLE">
-                        <d:var name="PortPinPFE" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinODE" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLK" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinId" type="INTEGER" value="4">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinPcr" type="INTEGER" value="75"/>
-                        <d:var name="PortPinMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDSE" type="ENUMERATION" 
-                               value="Low_Drive_Strength">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinPE" type="ENUMERATION" 
-                               value="PullDisabled">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinPS" type="ENUMERATION" 
-                               value="PullDown">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinSlewRate" type="ENUMERATION" 
-                               value="FAST_SLEW_RATE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_OUT"/>
-                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="PORT_GPIO_MODE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_HIGH"/>
-                        <d:lst name="PortPinEcucPartitionRef"/>
-                      </d:ctr>
-                      <d:ctr name="C12_BIT4" type="IDENTIFIABLE">
-                        <d:var name="PortPinPFE" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinODE" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLK" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinId" type="INTEGER" value="5">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinPcr" type="INTEGER" value="76"/>
-                        <d:var name="PortPinMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDSE" type="ENUMERATION" 
-                               value="Low_Drive_Strength">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinPE" type="ENUMERATION" 
-                               value="PullDisabled">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinPS" type="ENUMERATION" 
-                               value="PullDown">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinSlewRate" type="ENUMERATION" 
-                               value="FAST_SLEW_RATE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_OUT"/>
-                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="PORT_GPIO_MODE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_HIGH"/>
-                        <d:lst name="PortPinEcucPartitionRef"/>
-                      </d:ctr>
-                      <d:ctr name="C13_BIT5" type="IDENTIFIABLE">
-                        <d:var name="PortPinPFE" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinODE" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLK" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinId" type="INTEGER" value="6">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinPcr" type="INTEGER" value="77"/>
-                        <d:var name="PortPinMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDSE" type="ENUMERATION" 
-                               value="Low_Drive_Strength">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinPE" type="ENUMERATION" 
-                               value="PullDisabled">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinPS" type="ENUMERATION" 
-                               value="PullDown">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinSlewRate" type="ENUMERATION" 
-                               value="FAST_SLEW_RATE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_OUT"/>
-                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="PORT_GPIO_MODE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_HIGH"/>
-                        <d:lst name="PortPinEcucPartitionRef"/>
-                      </d:ctr>
-                      <d:ctr name="C14_BIT6" type="IDENTIFIABLE">
-                        <d:var name="PortPinPFE" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinODE" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLK" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinId" type="INTEGER" value="7">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinPcr" type="INTEGER" value="78"/>
-                        <d:var name="PortPinMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDSE" type="ENUMERATION" 
-                               value="Low_Drive_Strength">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinPE" type="ENUMERATION" 
-                               value="PullDisabled">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinPS" type="ENUMERATION" 
-                               value="PullDown">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinSlewRate" type="ENUMERATION" 
-                               value="FAST_SLEW_RATE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_OUT"/>
-                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="PORT_GPIO_MODE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_HIGH"/>
-                        <d:lst name="PortPinEcucPartitionRef"/>
-                      </d:ctr>
-                      <d:ctr name="C15_BIT7" type="IDENTIFIABLE">
-                        <d:var name="PortPinPFE" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinODE" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLK" type="BOOLEAN" value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinId" type="INTEGER" value="8">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:var name="PortPinPcr" type="INTEGER" value="79"/>
-                        <d:var name="PortPinMode" type="ENUMERATION" 
-                               value="GPIO">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDSE" type="ENUMERATION" 
-                               value="Low_Drive_Strength">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinPE" type="ENUMERATION" 
-                               value="PullDisabled">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinPS" type="ENUMERATION" 
-                               value="PullDown">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinSlewRate" type="ENUMERATION" 
-                               value="FAST_SLEW_RATE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_OUT"/>
-                        <d:var name="PortPinInitialMode" type="ENUMERATION" 
-                               value="PORT_GPIO_MODE">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_HIGH"/>
+                               value="PORT_PIN_LEVEL_NOTCHANGED"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
                     </d:lst>
