@@ -65,9 +65,7 @@
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
                                value="false"/>
                         <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="false"/>
                         <d:var name="PortPinId" type="INTEGER" value="1">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@DEF</a:v>
@@ -96,7 +94,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_OUT"/>
+                               value="PORT_PIN_IN"/>
                         <d:var name="PortPinInitialMode" type="ENUMERATION" 
                                value="PORT_GPIO_MODE">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -165,9 +163,7 @@
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
                                value="false"/>
                         <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="true">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="false"/>
                         <d:var name="PortPinId" type="INTEGER" value="3">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@DEF</a:v>
@@ -220,7 +216,7 @@
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
                                value="false"/>
                         <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="true"/>
+                               value="false"/>
                         <d:var name="PortPinId" type="INTEGER" value="4">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@DEF</a:v>
@@ -249,7 +245,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_OUT"/>
+                               value="PORT_PIN_IN"/>
                         <d:var name="PortPinInitialMode" type="ENUMERATION" 
                                value="PORT_GPIO_MODE">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -484,7 +480,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_HIGH"/>
+                               value="PORT_PIN_LEVEL_LOW"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
                       <d:ctr name="C10_BIT2" type="IDENTIFIABLE">
@@ -539,7 +535,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_HIGH"/>
+                               value="PORT_PIN_LEVEL_LOW"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
                       <d:ctr name="C11_BIT3" type="IDENTIFIABLE">
@@ -594,7 +590,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_HIGH"/>
+                               value="PORT_PIN_LEVEL_LOW"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
                       <d:ctr name="C12_BIT4" type="IDENTIFIABLE">
@@ -649,7 +645,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_HIGH"/>
+                               value="PORT_PIN_LEVEL_LOW"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
                       <d:ctr name="C13_BIT5" type="IDENTIFIABLE">
@@ -704,7 +700,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_HIGH"/>
+                               value="PORT_PIN_LEVEL_LOW"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
                       <d:ctr name="C14_BIT6" type="IDENTIFIABLE">
@@ -759,7 +755,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_HIGH"/>
+                               value="PORT_PIN_LEVEL_LOW"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
                       <d:ctr name="C15_BIT7" type="IDENTIFIABLE">
@@ -814,7 +810,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_HIGH"/>
+                               value="PORT_PIN_LEVEL_LOW"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
                     </d:lst>

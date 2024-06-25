@@ -369,8 +369,8 @@
                       <d:var name="McuSystemClockFrequency" type="FLOAT" 
                              value="4.8E7">
                         <a:a name="IMPORTER_INFO">
-                          <a:v>@DEF</a:v>
                           <a:v>@CALC</a:v>
+                          <a:v>@DEF</a:v>
                         </a:a>
                       </d:var>
                       <d:var name="McuBusClockFrequency" type="FLOAT" 
@@ -1361,7 +1361,7 @@
                           </a:a>
                         </d:var>
                         <d:var name="McuPeripheralClockEnable" type="BOOLEAN" 
-                               value="false"/>
+                               value="true"/>
                         <d:var name="McuPeripheralClockSelect" 
                                type="ENUMERATION" value="CLOCK_IS_OFF">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -1375,7 +1375,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="McuPeripheralClockFrequency" type="FLOAT" 
-                               value="0.0"/>
+                               value="32000.0"/>
                       </d:ctr>
                       <d:ctr name="McuPeripheralClockConfig_15" 
                              type="IDENTIFIABLE">
@@ -1981,6 +1981,18 @@
                                type="ENUMERATION" value="RUN_SYS_CLK">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
+                      </d:ctr>
+                      <d:ctr name="McuClockReferencePoint_1" 
+                             type="IDENTIFIABLE">
+                        <d:var name="McuClockReferencePointFrequency" 
+                               type="FLOAT" value="4.8E7">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@CALC</a:v>
+                            <a:v>@DEF</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:var name="McuClockFrequencySelect" 
+                               type="ENUMERATION" value="FIRCDIV1_CLK"/>
                       </d:ctr>
                     </d:lst>
                   </d:ctr>
