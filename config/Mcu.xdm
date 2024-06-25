@@ -1375,7 +1375,12 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="McuPeripheralClockFrequency" type="FLOAT" 
-                               value="32000.0"/>
+                               value="32000.0">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@CALC</a:v>
+                            <a:v>@DEF</a:v>
+                          </a:a>
+                        </d:var>
                       </d:ctr>
                       <d:ctr name="McuPeripheralClockConfig_15" 
                              type="IDENTIFIABLE">

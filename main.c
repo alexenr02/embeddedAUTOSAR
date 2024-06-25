@@ -2,26 +2,28 @@
 #include "Port.h"
 #include "Dio.h"
 #include "Gpt.h"
+#include "Platform.h"
 
 void EcuM_Init( void );
+
+/*this function is gonna be called on ISR from FTM0_CH0_CH1, it is basically a callback
+called by FTM_0_CH_0_CH_1_ISR library function*/
+void Gpt_Notification_0( void )
+{
+    /*here, we just toggle BLUE LED*/
+    Dio_FlipChannel( DioConf_DioChannel_D0_BLUE_LED );
+}
 
 int main( void )
 {
     EcuM_Init();
-    /*Start the timer and set it to Running state*/
+    /*Start the timer and set it to Running state with a timeout of 100ms --- 1000 ms = 375000u*/ 
     Gpt_StartTimer( GptConf_GptChannelConfiguration_GptChannelConfiguration_0, 37500u );
+    /*Enable notifications, Gpt_TimeoutCallback will be called on each timeout*/
+    Gpt_EnableNotification( GptConf_GptChannelConfiguration_GptChannelConfiguration_0 );
+
     while( 1u )
     {
-        if( Gpt_GetTimeRemaining( GptConf_GptChannelConfiguration_GptChannelConfiguration_0 ) == 0u )
-        {
-            /*if we are not using notifications it is neceseary to change the channel status from running
-            manually, we can use the Stop function for that purpose, otherwise the Start function will 
-            never reload the timer with a new count again */
-            Gpt_StopTimer( GptConf_GptChannelConfiguration_GptChannelConfiguration_0 );
-            Dio_FlipChannel( DioConf_DioChannel_D0_BLUE_LED );
-            /*start the timer again*/
-            Gpt_StartTimer( GptConf_GptChannelConfiguration_GptChannelConfiguration_0, 37500u );
-        }
     }
 
     return 0u;
@@ -33,9 +35,10 @@ void EcuM_Init( void )
     /* Initialize the clock tree with no PLL active*/
     Mcu_InitClock( McuClockSettingConfig_0 );
     Mcu_SetMode( McuModeSettingConf_0 );
+    /*enable and setup interrupts*/
+    Platform_Init( NULL_PTR );
     /*Apply all the Pin Port microcontroller configuration, for this case
     only Port Pin 96  (D0) is configured as output*/
     Port_Init( &Port_Config );
-    /*Apply Gpt configuration for FTM0 channel 0*/
     Gpt_Init( &Gpt_Config );
 }
