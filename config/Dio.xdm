@@ -27,73 +27,21 @@
               </d:var>
               <d:ctr name="DioConfig" type="IDENTIFIABLE">
                 <d:lst name="DioPort" type="MAP">
-                  <d:ctr name="PORTD" type="IDENTIFIABLE">
+                  <d:ctr name="DioPort_0" type="IDENTIFIABLE">
                     <d:var name="DioPortId" type="INTEGER" value="3"/>
                     <d:lst name="DioChannel" type="MAP">
-                      <d:ctr name="D15_RED_LED" type="IDENTIFIABLE">
-                        <d:var name="DioChannelId" type="INTEGER" value="15"/>
-                        <d:lst name="DioChannelEcucPartitionRef"/>
-                      </d:ctr>
-                      <d:ctr name="D0_BLUE_LED" type="IDENTIFIABLE">
+                      <d:ctr name="DioChannel_0" type="IDENTIFIABLE">
                         <d:var name="DioChannelId" type="INTEGER" value="0">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:lst name="DioChannelEcucPartitionRef"/>
                       </d:ctr>
-                      <d:ctr name="D16_GREEN_LED" type="IDENTIFIABLE">
+                      <d:ctr name="DioChannel_1" type="IDENTIFIABLE">
                         <d:var name="DioChannelId" type="INTEGER" value="16"/>
                         <d:lst name="DioChannelEcucPartitionRef"/>
                       </d:ctr>
-                      <d:ctr name="D17_SW2_BTN" type="IDENTIFIABLE">
-                        <d:var name="DioChannelId" type="INTEGER" value="17"/>
-                        <d:lst name="DioChannelEcucPartitionRef"/>
-                      </d:ctr>
                     </d:lst>
                     <d:lst name="DioChannelGroup" type="MAP"/>
-                    <d:lst name="DioPortEcucPartitionRef"/>
-                  </d:ctr>
-                  <d:ctr name="PORTA" type="IDENTIFIABLE">
-                    <d:var name="DioPortId" type="INTEGER" value="0">
-                      <a:a name="IMPORTER_INFO" value="@DEF"/>
-                    </d:var>
-                    <d:lst name="DioChannel" type="MAP">
-                      <d:ctr name="A12_SW3_BTN" type="IDENTIFIABLE">
-                        <d:var name="DioChannelId" type="INTEGER" value="12"/>
-                        <d:lst name="DioChannelEcucPartitionRef"/>
-                      </d:ctr>
-                    </d:lst>
-                    <d:lst name="DioChannelGroup" type="MAP"/>
-                    <d:lst name="DioPortEcucPartitionRef"/>
-                  </d:ctr>
-                  <d:ctr name="PORTE" type="IDENTIFIABLE">
-                    <d:var name="DioPortId" type="INTEGER" value="4"/>
-                    <d:lst name="DioChannel" type="MAP">
-                      <d:ctr name="E12_SW1_BTN" type="IDENTIFIABLE">
-                        <d:var name="DioChannelId" type="INTEGER" value="12"/>
-                        <d:lst name="DioChannelEcucPartitionRef"/>
-                      </d:ctr>
-                    </d:lst>
-                    <d:lst name="DioChannelGroup" type="MAP"/>
-                    <d:lst name="DioPortEcucPartitionRef"/>
-                  </d:ctr>
-                  <d:ctr name="PORTC" type="IDENTIFIABLE">
-                    <d:var name="DioPortId" type="INTEGER" value="2"/>
-                    <d:lst name="DioChannel" type="MAP"/>
-                    <d:lst name="DioChannelGroup" type="MAP">
-                      <d:ctr name="PORTC_LEDS" type="IDENTIFIABLE">
-                        <d:var name="DioChannelGroupIdentification" 
-                               type="STRING" value="LedsGroup"/>
-                        <d:var name="DioPortBitNumber" type="INTEGER" value="8"/>
-                        <d:var name="DioPortOffset" type="INTEGER" value="8"/>
-                        <d:var name="DioPortMask" type="INTEGER" value="65280">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@CALC</a:v>
-                            <a:v>@DEF</a:v>
-                          </a:a>
-                        </d:var>
-                        <d:lst name="DioChannelGroupEcucPartitionRef"/>
-                      </d:ctr>
-                    </d:lst>
                     <d:lst name="DioPortEcucPartitionRef"/>
                   </d:ctr>
                 </d:lst>

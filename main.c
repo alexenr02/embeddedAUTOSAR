@@ -8,19 +8,30 @@ void EcuM_Init( void );
 
 /*this function is gonna be called on ISR from FTM0_CH0_CH1, it is basically a callback
 called by FTM_0_CH_0_CH_1_ISR library function*/
-void Gpt_Notification_0( void )
+void Gpt_TimeoutCallback_0( void )
 {
-    /*here, we just toggle BLUE LED*/
-    Dio_FlipChannel( DioConf_DioChannel_D0_BLUE_LED );
+    /*here, we just toggle led connected to D0*/
+    Dio_FlipChannel( DioConf_DioChannel_DioChannel_0 );
+}
+
+/*this function is gonna be called on ISR from FTM0_CH0_CH1, it is basically a callback
+called by FTM_0_CH_0_CH_1_ISR library function*/
+void Gpt_TimeoutCallback_1( void )
+{
+    /*here, we just toggle led connected to D16*/
+    Dio_FlipChannel( DioConf_DioChannel_DioChannel_1 );
 }
 
 int main( void )
 {
     EcuM_Init();
-    /*Start the timer and set it to Running state with a timeout of 100ms --- 1000 ms = 375000u*/ 
+    /*Start the timers and set it to Running state with a timeout of 200ms*/
     Gpt_StartTimer( GptConf_GptChannelConfiguration_GptChannelConfiguration_0, 37500u );
-    /*Enable notifications, Gpt_TimeoutCallback will be called on each timeout*/
+    Gpt_StartTimer( GptConf_GptChannelConfiguration_GptChannelConfiguration_1, 37500u );
+    
+    /*Enable notifications, Gpt_TimeoutCallbacks will be called on each timeout*/
     Gpt_EnableNotification( GptConf_GptChannelConfiguration_GptChannelConfiguration_0 );
+    Gpt_EnableNotification( GptConf_GptChannelConfiguration_GptChannelConfiguration_1 );
 
     while( 1u )
     {
@@ -38,7 +49,7 @@ void EcuM_Init( void )
     /*enable and setup interrupts*/
     Platform_Init( NULL_PTR );
     /*Apply all the Pin Port microcontroller configuration, for this case
-    only Port Pin 96  (D0) is configured as output*/
+    only Port Pin 96 (D0) and 112 (D16) is configured as output*/
     Port_Init( &Port_Config );
     Gpt_Init( &Gpt_Config );
 }
