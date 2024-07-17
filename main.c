@@ -1,40 +1,35 @@
 #include "Mcu.h"
 #include "Port.h"
 #include "Dio.h"
-#include "Gpt.h"
-#include "Platform.h"
+#include "Osif.h"
 
 void EcuM_Init( void );
-
-/*this function is gonna be called on ISR from FTM0_CH0_CH1, it is basically a callback
-called by FTM_0_CH_0_CH_1_ISR library function*/
-void Gpt_TimeoutCallback_0( void )
-{
-    /*here, we just toggle led connected to D0*/
-    Dio_FlipChannel( DioConf_DioChannel_DioChannel_0 );
-}
-
-/*this function is gonna be called on ISR from FTM0_CH0_CH1, it is basically a callback
-called by FTM_0_CH_0_CH_1_ISR library function*/
-void Gpt_TimeoutCallback_1( void )
-{
-    /*here, we just toggle led connected to D16*/
-    Dio_FlipChannel( DioConf_DioChannel_DioChannel_1 );
-}
 
 int main( void )
 {
     EcuM_Init();
-    /*Start the timers and set it to Running state with a timeout of 200ms*/
-    Gpt_StartTimer( GptConf_GptChannelConfiguration_GptChannelConfiguration_0, 37500u );
-    Gpt_StartTimer( GptConf_GptChannelConfiguration_GptChannelConfiguration_1, 37500u );
-    
-    /*Enable notifications, Gpt_TimeoutCallbacks will be called on each timeout*/
-    Gpt_EnableNotification( GptConf_GptChannelConfiguration_GptChannelConfiguration_0 );
-    Gpt_EnableNotification( GptConf_GptChannelConfiguration_GptChannelConfiguration_1 );
 
+    /*get the number of ticks corresponding to 500ms, the resolution will depend
+    on the frequency feediong the systick timer in this case with a freq of
+    48MHz we could have up to 20ns, but the fucntion only accpet microseconds*/
+    uint32 Timeout_500ms = OsIf_MicrosToTicks( 500000u, OSIF_COUNTER_SYSTEM );
+    /*get the Systic Timer count for the first time*/
+    uint32 SeedTick = OsIf_GetCounter( OSIF_COUNTER_SYSTEM );
+    /*We need to count the elapsed time from zero*/
+    uint32 ElapsedTime = 0u;
+        
     while( 1u )
     {
+        /* get the elapsed time count from the seed tick value*/
+        ElapsedTime += OsIf_GetElapsed( &SeedTick, OSIF_COUNTER_SYSTEM );
+        /*query if the elapsed time is already equal or bigger than the timeout*/
+        if( ElapsedTime >= Timeout_500ms )
+        {
+            /*reset the elapsed time */
+            ElapsedTime = 0u;
+            /*toggle led*/
+            Dio_FlipChannel( DioConf_DioChannel_DioChannel_0 );
+        }
     }
 
     return 0u;
@@ -46,10 +41,9 @@ void EcuM_Init( void )
     /* Initialize the clock tree with no PLL active*/
     Mcu_InitClock( McuClockSettingConfig_0 );
     Mcu_SetMode( McuModeSettingConf_0 );
-    /*enable and setup interrupts*/
-    Platform_Init( NULL_PTR );
+    /*Init the internal tick reference Systick Timer*/
+    OsIf_Init( NULL_PTR );
     /*Apply all the Pin Port microcontroller configuration, for this case
-    only Port Pin 96 (D0) and 112 (D16) is configured as output*/
+    only Port Pin 96  (D0) is configured as output*/
     Port_Init( &Port_Config );
-    Gpt_Init( &Gpt_Config );
 }
