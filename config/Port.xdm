@@ -52,9 +52,14 @@
                 </d:ctr>
                 <d:lst name="PortContainer" type="MAP">
                   <d:ctr name="PortContainer_0" type="IDENTIFIABLE">
-                    <d:var name="PortNumberOfPortPins" type="INTEGER" value="2"/>
+                    <d:var name="PortNumberOfPortPins" type="INTEGER" value="2">
+                      <a:a name="IMPORTER_INFO">
+                        <a:v>@CALC</a:v>
+                        <a:v>@DEF</a:v>
+                      </a:a>
+                    </d:var>
                     <d:lst name="PortPin" type="MAP">
-                      <d:ctr name="PortPin_0" type="IDENTIFIABLE">
+                      <d:ctr name="D0_BLUE_LED" type="IDENTIFIABLE">
                         <d:var name="PortPinPFE" type="BOOLEAN" value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
@@ -65,9 +70,13 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
-                               value="false"/>
+                               value="true">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
                         <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="false"/>
+                               value="true">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
                         <d:var name="PortPinId" type="INTEGER" value="1">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@CALC</a:v>
@@ -102,12 +111,10 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_LOW">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_LEVEL_HIGH"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
-                      <d:ctr name="PortPin_1" type="IDENTIFIABLE">
+                      <d:ctr name="D15_RED_LED" type="IDENTIFIABLE">
                         <d:var name="PortPinPFE" type="BOOLEAN" value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
@@ -118,16 +125,20 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
-                               value="false"/>
+                               value="true">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
                         <d:var name="PortPinModeChangeable" type="BOOLEAN" 
-                               value="false"/>
+                               value="true">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
                         <d:var name="PortPinId" type="INTEGER" value="2">
                           <a:a name="IMPORTER_INFO">
-                            <a:v>@CALC</a:v>
                             <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
                           </a:a>
                         </d:var>
-                        <d:var name="PortPinPcr" type="INTEGER" value="112"/>
+                        <d:var name="PortPinPcr" type="INTEGER" value="111"/>
                         <d:var name="PortPinMode" type="ENUMERATION" 
                                value="GPIO">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -155,9 +166,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_LOW">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_LEVEL_HIGH"/>
                         <d:lst name="PortPinEcucPartitionRef"/>
                       </d:ctr>
                     </d:lst>

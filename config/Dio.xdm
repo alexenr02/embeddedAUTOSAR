@@ -27,17 +27,15 @@
               </d:var>
               <d:ctr name="DioConfig" type="IDENTIFIABLE">
                 <d:lst name="DioPort" type="MAP">
-                  <d:ctr name="DioPort_0" type="IDENTIFIABLE">
+                  <d:ctr name="PORTD" type="IDENTIFIABLE">
                     <d:var name="DioPortId" type="INTEGER" value="3"/>
                     <d:lst name="DioChannel" type="MAP">
-                      <d:ctr name="DioChannel_0" type="IDENTIFIABLE">
-                        <d:var name="DioChannelId" type="INTEGER" value="0">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                      <d:ctr name="D15_RED_LED" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="15"/>
                         <d:lst name="DioChannelEcucPartitionRef"/>
                       </d:ctr>
-                      <d:ctr name="DioChannel_1" type="IDENTIFIABLE">
-                        <d:var name="DioChannelId" type="INTEGER" value="16"/>
+                      <d:ctr name="D0_BLUE_LED" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="0"/>
                         <d:lst name="DioChannelEcucPartitionRef"/>
                       </d:ctr>
                     </d:lst>

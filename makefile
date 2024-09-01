@@ -23,6 +23,7 @@ SRC_PATHS += Autosar/Mcal/Platform/startup/src/m4
 SRC_PATHS += Autosar/Mcal/Platform/startup/src/m4/gcc
 SRC_PATHS += Build/cfg/src
 SRC_PATHS += Rtt/SEGGER
+SRC_PATHS += Os/src
 
 #direcotrios con archivos .h
 INC_PATHS  = $(foreach Module, $(MCAL_SRCS), Autosar/Mcal/$(Module)/include)
@@ -32,6 +33,7 @@ INC_PATHS += Autosar/Mcal/Platform/startup/include
 INC_PATHS += Build/cfg/include
 INC_PATHS += Rtt/SEGGER
 INC_PATHS += Rtt/Config
+INC_PATHS += Os/include
 
 TOOLCHAIN = /c/NXP/gcc-10.2-arm32-eabi/bin/arm-none-eabi
 CLIB = "/c/NXP/gcc-10.2-arm32-eabi/arm-none-eabi/newlib"
